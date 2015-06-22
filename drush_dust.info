@@ -1,0 +1,4 @@
+name = Drush Dust
+description = Call <pre>drush dust MYMODULE</pre> to dsiable and uninstall a module in one step without prompt. Disclaimer: Only use this module for development purpose since you may accidentely delete custom module settings stored in the database.
+core = 7.x
+package = Custom
