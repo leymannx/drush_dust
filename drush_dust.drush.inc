@@ -37,6 +37,7 @@ function drush_dust_drush_command() {
  */
 function drush_drush_dust_dust($MYMODULE = NULL) {
 
+  // module_exists() only returns TRUE if the module is currently enabled
   if (module_exists($MYMODULE)) {
 
     module_disable(array($MYMODULE));
@@ -44,6 +45,6 @@ function drush_drush_dust_dust($MYMODULE = NULL) {
     // log to the command line with an OK status
     drush_log(dt('Disabled and uninstalled ') . $MYMODULE, 'success');
   } else {
-    drush_print(dt('Module not found. Please check for typos.'));
+    drush_print(dt('Module already disabled or non-existent. Check for typos.'));
   }
 }
